@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+
+# ######################################################################## #
+# File:         bin/wwtcli
+#
+# Purpose:      Command-Line Interface for WebWireTap.Ruby
+#
+# Created:      10th July 2019
+# Updated:      10th July 2019
+#
+# Author:       Matthew Wilson
+#
+# ######################################################################## #
+
+
+# ######################################################################## #
+# requires
+
+require 'webwiretap'
+
+require 'libclimate'
+require 'pantheios'
+
+# ######################################################################## #
+# constants
+
+PROGRAM_VERSION	=	'0.0.1'
+
+# ######################################################################## #
+# command-line handling
+
+options = {}
+climate = LibCLImate::Climate.new do |cl|
+
+	cl.version = PROGRAM_VERSION
+
+	cl.info_lines = [
+
+		'TODO: COMPLETE THIS',
+		nil,
+		:version,
+		nil,
+	]
+
+	cl.constrain_values = 2
+	cl.usage_values = '<exposed-endpoint> <tapped-endpoint>'
+	cl.value_names = [ 'exposed endpoint', 'tapped-endpoint' ]
+end
+
+r = climate.run ARGV
+
+# ######################################################################## #
+# main
+
+
+
+
+# ############################## end of file ############################# #
+
+
